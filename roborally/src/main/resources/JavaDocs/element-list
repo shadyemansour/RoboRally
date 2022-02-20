@@ -1,0 +1,16 @@
+module:roborallyGUI
+game.gameLogic
+game.gameObjects.bot
+game.gameObjects.cards
+game.gameObjects.cards.damageCards
+game.gameObjects.cards.programmingCards.regularProgrammingCards
+game.gameObjects.cards.programmingCards.specialProgrammingCards
+game.gameObjects.cards.upgradeCards.permanentUpgradeCards
+game.gameObjects.cards.upgradeCards.temporaryUpgradeCards
+game.gameObjects.gamefield
+game.gameObjects.otherObjects
+game.gameObjects.robots
+model
+networking
+view
+viewmodel

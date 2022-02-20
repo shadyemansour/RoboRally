@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+    <Properties>
+        <Property name="basePath">/Logs</Property>
+    </Properties>
+
+    <Appenders>
+        <RollingFile name="server"
+                     fileName="Logs/Server/server.log"
+                     filePattern="Logs/Server/server-backup-%d{MM-dd-yyyy-HH-mm}.%i.log.gz"
+                     ignoreExceptions="false">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %p %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <OnStartupTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="10 MB" />
+            </Policies>
+            <DefaultRolloverStrategy>
+                <Delete basePath="${baseDir}" maxDepth="2">
+                    <IfFileName glob="Logs/Server/server.*.log.gz" />
+                    <IfLastModified age="20d" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+        <RollingFile name="user"
+                     fileName="Logs/User/user.log"
+                     filePattern="Logs/User/user-backup-%d{MM-dd-yyyy-HH-mm}.%i.log.gz"
+                     ignoreExceptions="false">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %p %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <OnStartupTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="10 MB" />
+            </Policies>
+            <DefaultRolloverStrategy>
+                <Delete basePath="${baseDir}" maxDepth="2">
+                    <IfFileName glob="Logs/User/user.*.log.gz" />
+                    <IfLastModified age="20d" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+        <RollingFile name="game"
+                     fileName="Logs/Game/game.log"
+                     filePattern="Logs/Game/game-backup-%d{MM-dd-yyyy-HH-mm}.%i.log.gz"
+                     ignoreExceptions="false">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %p %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <OnStartupTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="10 MB" />
+            </Policies>
+            <DefaultRolloverStrategy>
+                <Delete basePath="${baseDir}" maxDepth="2">
+                    <IfFileName glob="Logs/Game/game.*.log.gz" />
+                    <IfLastModified age="20d" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+        <RollingFile name="bot"
+                     fileName="Logs/Bot/bot.log"
+                     filePattern="Logs/Bot/bot-backup-%d{MM-dd-yyyy-HH-mm}.%i.log.gz"
+                     ignoreExceptions="false">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %p %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <OnStartupTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="10 MB" />
+            </Policies>
+            <DefaultRolloverStrategy>
+                <Delete basePath="${baseDir}" maxDepth="2">
+                    <IfFileName glob="Logs/Bot/bot.*.log.gz" />
+                    <IfLastModified age="20d" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+        <RollingFile name="gui"
+                     fileName="Logs/GUI/GUI.log"
+                     filePattern="/Logs/GUI/GUI-backup-%d{MM-dd-yyyy-HH-mm}.%i.log.gz"
+                     ignoreExceptions="false">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %p %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <OnStartupTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="10 MB" />
+            </Policies>
+            <DefaultRolloverStrategy>
+                <Delete basePath="${baseDir}" maxDepth="2">
+                    <IfFileName glob="Logs/GUI/GUI.*.log.gz" />
+                    <IfLastModified age="20d" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout disableAnsi="false"  pattern="%highlight{%d{HH:mm:ss.SSS} %-5level %logger{36}.%M() @%L - %msg%n}{FATAL=red blink, ERROR=red, WARN=yellow bold, INFO=white, DEBUG=green bold, TRACE=blue}"/>
+
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="org.kursivekationen.roborally.Server" level="debug" additivity="false">
+            <appender-ref ref="server" level="debug" />
+            <appender-ref ref="console" level="debug" />
+        </Logger>
+
+        <Logger name="org.kursivekationen.roborally.User" level="debug" additivity="false">
+            <appender-ref ref="user" level="debug" />
+            <appender-ref ref="console" level="debug" />
+        </Logger>
+
+        <Logger name="org.kursivekationen.roborally.PlayerThead" level="debug" additivity="false">
+            <appender-ref ref="user" level="debug" />
+            <appender-ref ref="console" level="debug" />
+        </Logger>
+
+        <Logger name="org.kursivekationen.roborally.Game" level="debug" additivity="false">
+            <appender-ref ref="game" level="debug" />
+            <appender-ref ref="console" level="debug" />
+        </Logger>
+
+        <Logger name="org.kursivekationen.roborally.Bot" level="debug" additivity="false">
+            <appender-ref ref="bot" level="debug" />
+            <appender-ref ref="console" level="debug" />
+        </Logger>
+
+        <Logger name="org.kursivekationen.roborally.GUI" level="debug" additivity="false">
+            <appender-ref ref="gui" level="debug" />
+            <appender-ref ref="console" level="debug" />
+        </Logger>
+
+        <Root level="debug" additivity="false">
+            <appender-ref ref="console" />
+        </Root>
+
+    </Loggers>
+</Configuration>
+

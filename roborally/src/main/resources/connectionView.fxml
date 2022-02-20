@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root_borderPane" maxHeight="1080.0" maxWidth="1920.0" minHeight="414.0" minWidth="736.0" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@Stylesheets/Stylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ConnectionViewController">
+   <center>
+      <GridPane maxHeight="880.0" maxWidth="1820.0" minHeight="360.0" minWidth="540.0" prefHeight="1600.0" prefWidth="2560.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="2360.0" minWidth="860.0" prefWidth="2360.0" />
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="100.0" prefHeight="100.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="600.0" minHeight="150.0" prefHeight="600.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints />
+         </rowConstraints>
+         <children>
+            <ImageView fx:id="img_Background" fitHeight="1080.0" fitWidth="1920.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowSpan="3" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+               <image>
+                  <Image url="@Images/Backgrounds/ConnectionViewBackground.gif" />
+               </image>
+            </ImageView>
+            <GridPane alignment="CENTER" maxHeight="300.0" maxWidth="860.0" minHeight="150.0" minWidth="430.0" prefHeight="402.0" prefWidth="860.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="860.0" minWidth="430.0" prefWidth="486.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="860.0" minWidth="358.0" prefWidth="374.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="125.0" minHeight="125.0" prefHeight="125.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="300.0" minHeight="29.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="300.0" minHeight="75.0" prefHeight="196.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="btn_ConnectToServer" maxWidth="220.0" mnemonicParsing="false" onMouseClicked="#connectToServer" text="Connect to Server" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font name="Neon Toolbox" size="20.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" right="20.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <CheckBox fx:id="cb_AI" alignment="CENTER" contentDisplay="RIGHT" graphicTextGap="0.0" mnemonicParsing="false" selected="true" text="KI" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font name="Neon Toolbox" size="32.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </CheckBox>
+                  <TextField fx:id="txt_Error" maxHeight="50.0" maxWidth="260.0" minHeight="50.0" minWidth="260.0" prefHeight="50.0" prefWidth="260.0" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets right="20.0" top="40.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Button fx:id="btn_CloseError" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onMouseClicked="#closeError" prefHeight="50.0" prefWidth="50.0" styleClass="btn_close" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets left="20.0" top="40.0" />
+                     </GridPane.margin>
+                  </Button>
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </GridPane>
+         </children>
+      </GridPane>
+   </center>
+   <top>
+      <Pane maxHeight="100.0" maxWidth="1920.0" prefHeight="100.0" prefWidth="1920.0" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <Pane maxHeight="880.0" maxWidth="100.0" minWidth="61.0" prefHeight="880.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Pane maxHeight="880.0" maxWidth="100.0" minWidth="61.0" prefHeight="880.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <Pane prefHeight="100.0" prefWidth="1920.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

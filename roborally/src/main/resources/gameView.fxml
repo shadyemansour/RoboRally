@@ -1,0 +1,1500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="root_borderPane" maxHeight="1080.0" maxWidth="1920.0" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@Stylesheets/Stylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.GameViewController">
+   <top>
+      <Pane maxHeight="400.0" maxWidth="1920.0" prefHeight="10.0" prefWidth="1920.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="img_Background" fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Images/Backgrounds/StandardBackground.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </top>
+   <right>
+      <Pane maxHeight="880.0" maxWidth="20.0" minWidth="20.0" prefHeight="880.0" prefWidth="20.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <Pane maxHeight="0.0" maxWidth="1920.0" minHeight="0.0" prefHeight="0.0" prefWidth="1920.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <left>
+      <Pane maxHeight="880.0" maxWidth="20.0" minWidth="20.0" prefHeight="880.0" prefWidth="20.0" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <StackPane BorderPane.alignment="CENTER">
+         <children>
+            <GridPane fx:id="grid_Game">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="500.0" minHeight="500.0" prefHeight="500.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="310.0" prefHeight="310.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <GridPane maxHeight="500.0" GridPane.valignment="TOP">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="840.0" minWidth="840.0" prefWidth="840.0" />
+                        <ColumnConstraints hgrow="ALWAYS" maxWidth="510.0" minWidth="510.0" prefWidth="510.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <GridPane maxHeight="500.0" prefHeight="500.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="120.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="500.0" prefWidth="500.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="500.0" minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Pane fx:id="pane_startingBoard" maxHeight="500.0" maxWidth="150.0" minHeight="500.0" minWidth="150.0" prefHeight="500.0" prefWidth="150.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+                                 <children>
+                                    <GridPane maxHeight="500.0" maxWidth="150.0" minHeight="500.0" minWidth="150.0" prefHeight="500.0" prefWidth="150.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@Empty.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                                             <image>
+                                                <Image url="@Empty.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                                             <image>
+                                                <Image url="@Empty.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+                                             <image>
+                                                <Image url="@StartingField.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
+                                             <image>
+                                                <Image url="@Antenna.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5">
+                                             <image>
+                                                <Image url="@Empty.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6">
+                                             <image>
+                                                <Image url="@StartingField.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7">
+                                             <image>
+                                                <Image url="@Empty.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8">
+                                             <image>
+                                                <Image url="@Empty.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="9">
+                                             <image>
+                                                <Image url="@Empty.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                                             <image>
+                                                <Image url="@Empty.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <image>
+                                                <Image url="@StartingField.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <image>
+                                                <Image url="@Empty.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" rotate="270.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <image>
+                                                <Image url="@Wall.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <image>
+                                                <Image url="@Empty.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                             <image>
+                                                <Image url="@StartingField.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                             <image>
+                                                <Image url="@StartingField.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                             <image>
+                                                <Image url="@Empty.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                             <image>
+                                                <Image url="@Empty.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                             <image>
+                                                <Image url="@Wall.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                             <image>
+                                                <Image url="@StartingField.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                                             <image>
+                                                <Image url="@Empty.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                                             <image>
+                                                <Image url="@Belt1.gif" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="60.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <image>
+                                                <Image url="@Empty.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="110.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                             <image>
+                                                <Image url="@Empty.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="110.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                             <image>
+                                                <Image url="@Empty.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="110.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                             <image>
+                                                <Image url="@Empty.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="110.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                             <image>
+                                                <Image url="@Wall.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="110.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                             <image>
+                                                <Image url="@Empty.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="110.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                             <image>
+                                                <Image url="@Wall.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="110.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                             <image>
+                                                <Image url="@Empty.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="110.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                                             <image>
+                                                <Image url="@Empty.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="110.0" layoutY="360.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                                             <image>
+                                                <Image url="@Empty.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="110.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="9">
+                                             <image>
+                                                <Image url="@Belt1.gif" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="img_StartingBoardReboot" fitHeight="50.0" fitWidth="50.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@RestartPoint.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </GridPane>
+                                 </children></Pane>
+                              <Pane fx:id="pane_racingCourse" maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </Pane>
+                              <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" GridPane.valignment="TOP">
+                                 <image>
+                                    <Image url="@Images/Buttons/RobotStatsButton.png" />
+                                 </image>
+                                 <GridPane.margin>
+                                    <Insets top="42.0" />
+                                 </GridPane.margin>
+                              </ImageView>
+                              <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" GridPane.valignment="TOP">
+                                 <image>
+                                    <Image url="@Images/Buttons/ActivationPhaseHistoryButton.png" />
+                                 </image>
+                                 <GridPane.margin>
+                                    <Insets top="142.0" />
+                                 </GridPane.margin>
+                              </ImageView>
+                              <ImageView fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" GridPane.valignment="TOP">
+                                 <image>
+                                    <Image url="@Images/Buttons/ChatButton.png" />
+                                 </image>
+                                 <GridPane.margin>
+                                    <Insets top="242.0" />
+                                 </GridPane.margin>
+                              </ImageView>
+                              <ImageView fx:id="img_NewChat" fitHeight="150.0" fitWidth="70.0" layoutX="200.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                                 <image>
+                                    <Image url="@Images/Other/NewChat.png" />
+                                 </image>
+                                 <GridPane.margin>
+                                    <Insets left="50.0" top="230.0" />
+                                 </GridPane.margin>
+                              </ImageView>
+                              <ImageView fx:id="img_PlayItOn" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" GridPane.valignment="TOP">
+                                 <GridPane.margin>
+                                    <Insets top="342.0" />
+                                 </GridPane.margin>
+                                 <image>
+                                    <Image url="@Images/Buttons/PlayItOnButton.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="img_PlayItOff" fitHeight="120.0" fitWidth="120.0" layoutX="10.0" layoutY="352.0" pickOnBounds="true" preserveRatio="true" GridPane.valignment="TOP">
+                                 <image>
+                                    <Image url="@Images/Buttons/PlayItOffButton.png" />
+                                 </image>
+                                 <GridPane.margin>
+                                    <Insets top="342.0" />
+                                 </GridPane.margin>
+                              </ImageView>
+                              <Button fx:id="btn_OpenStats" layoutX="30.0" layoutY="170.0" maxHeight="80.0" maxWidth="80.0" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onMouseClicked="#openStats" styleClass="btn_robots" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                 <GridPane.margin>
+                                    <Insets top="60.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="btn_OpenHistory" maxHeight="80.0" maxWidth="80.0" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onMouseClicked="#openHistory" styleClass="btn_robots" GridPane.valignment="TOP">
+                                 <GridPane.margin>
+                                    <Insets bottom="5.0" left="20.0" top="160.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="btn_OpenChat" maxHeight="80.0" maxWidth="80.0" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onMouseClicked="#openChat" styleClass="btn_robots" GridPane.halignment="LEFT" GridPane.valignment="TOP">
+                                 <GridPane.margin>
+                                    <Insets bottom="90.0" left="20.0" top="260.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <Button fx:id="btn_PlayIt" layoutX="30.0" layoutY="220.0" maxHeight="80.0" maxWidth="80.0" minHeight="80.0" minWidth="80.0" mnemonicParsing="false" onMouseClicked="#playIt" styleClass="btn_robots" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                 <GridPane.margin>
+                                    <Insets top="360.0" />
+                                 </GridPane.margin></Button>
+                              <Label fx:id="lbl_PlayIt" text="Play It" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                                 <font>
+                                    <Font name="Neon Toolbox" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="5.0" top="440.0" />
+                                 </GridPane.margin>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <GridPane maxWidth="440.0" prefHeight="500.0" prefWidth="1106.0" GridPane.columnIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="600.0" minWidth="600.0" prefWidth="600.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="460.0" minHeight="460.0" prefHeight="460.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="254.0" minHeight="10.0" prefHeight="140.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <GridPane>
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="400.0" prefWidth="400.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="400.0" prefWidth="400.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="460.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <GridPane>
+                                      <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="60.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="80.0" prefWidth="80.0" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="220.0" minWidth="220.0" prefWidth="220.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <ImageView fx:id="img_ownPlayerAvatar" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.valignment="CENTER">
+                                             <image>
+                                                <Image url="@TwonkyAvatar.png" />
+                                             </image>
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                          </ImageView>
+                                          <ImageView fx:id="img_Player1Avatar" fitHeight="70.0" fitWidth="70.0" layoutX="25.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                             <image>
+                                                <Image url="@HulkX90Avatar.png" />
+                                             </image>
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                          </ImageView>
+                                          <ImageView fx:id="img_Player2Avatar" fitHeight="70.0" fitWidth="70.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                             <image>
+                                                <Image url="@SmashBotAvatar.png" />
+                                             </image>
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                          </ImageView>
+                                          <ImageView fx:id="img_Player3Avatar" fitHeight="70.0" fitWidth="70.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                             <image>
+                                                <Image url="@HammerBotAvatar.png" />
+                                             </image>
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                          </ImageView>
+                                          <ImageView fx:id="img_Player4Avatar" fitHeight="70.0" fitWidth="70.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                             <image>
+                                                <Image url="@ZoomBotAvatar.png" />
+                                             </image>
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                          </ImageView>
+                                          <ImageView fx:id="img_Player5Avatar" fitHeight="70.0" fitWidth="70.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                             <image>
+                                                <Image url="@Images/Robots/SpinBotAvatar.png" />
+                                             </image>
+                                             <GridPane.margin>
+                                                <Insets left="10.0" />
+                                             </GridPane.margin>
+                                          </ImageView>
+                                          <ImageView fx:id="img_OwnPlayerBackground" fitHeight="100.0" fitWidth="215.0" pickOnBounds="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                             <image>
+                                                <Image url="@Images/Backgrounds/NameBackground.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="img_Player1Background" fitHeight="100.0" fitWidth="215.0" layoutX="110.0" layoutY="-1.0" pickOnBounds="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                             <image>
+                                                <Image url="@Images/Backgrounds/NameBackground.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="img_Player2Background" fitHeight="100.0" fitWidth="215.0" layoutX="10.0" layoutY="-1.0" pickOnBounds="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                             <image>
+                                                <Image url="@Images/Backgrounds/NameBackground.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="img_Player3Background" fitHeight="100.0" fitWidth="215.0" layoutX="110.0" layoutY="153.0" pickOnBounds="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+                                             <image>
+                                                <Image url="@Images/Backgrounds/NameBackground.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="img_Player4Background" fitHeight="100.0" fitWidth="215.0" layoutX="10.0" layoutY="-1.0" pickOnBounds="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+                                             <image>
+                                                <Image url="@Images/Backgrounds/NameBackground.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="img_Player5Background" fitHeight="100.0" fitWidth="215.0" layoutX="110.0" layoutY="230.0" pickOnBounds="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+                                             <image>
+                                                <Image url="@Images/Backgrounds/NameBackground.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="lbl_OwnName" minWidth="200.0" style="-fx-alignment: center;" text="Own Player" textAlignment="CENTER" textFill="#06c639" GridPane.columnIndex="2">
+                                             <font>
+                                                <Font name="Neon Toolbox" size="18.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="12.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label fx:id="lbl_Player1Name" layoutX="90.0" layoutY="29.0" minWidth="200.0" style="-fx-alignment: center;" text="Player 1" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="Neon Toolbox" size="18.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="12.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label fx:id="lbl_Player5Name" layoutX="10.0" layoutY="29.0" minWidth="200.0" style="-fx-alignment: center;" text="Player 5" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                             <font>
+                                                <Font name="Neon Toolbox" size="18.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="12.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label fx:id="lbl_Player4Name" layoutX="10.0" layoutY="29.0" minWidth="200.0" style="-fx-alignment: center;" text="Player 4" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                             <font>
+                                                <Font name="Neon Toolbox" size="18.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="12.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label fx:id="lbl_Player3Name" layoutX="10.0" layoutY="29.0" minWidth="200.0" style="-fx-alignment: center;" text="Player 3" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font name="Neon Toolbox" size="18.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="12.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <Label fx:id="lbl_Player2Name" layoutX="10.0" layoutY="29.0" minWidth="200.0" style="-fx-alignment: center;" text="Player 2" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="Neon Toolbox" size="18.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets bottom="5.0" left="12.0" />
+                                             </GridPane.margin>
+                                          </Label>
+                                          <ImageView fx:id="img_TimerGIF" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                                             <image>
+                                                <Image url="@Timer.gif" />
+                                             </image></ImageView>
+                                          <ImageView fx:id="img_TimerFrame" fitHeight="235.0" fitWidth="250.0" layoutX="130.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true" visible="false" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                                             <image>
+                                                <Image url="@TimerFrame.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+            <Pane fx:id="pane_Robots" layoutX="120.0" maxHeight="500.0" maxWidth="50.0" minHeight="500.0" minWidth="50.0" prefHeight="500.0" prefWidth="50.0" StackPane.alignment="TOP_LEFT">
+               <children>
+                  <ImageView fx:id="img_TwonkyLaser" fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@RoboLaser.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img_HulkX90Laser" fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@RoboLaser.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img_HammerBotLaser" fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@RoboLaser.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img_SmashBotLaser" fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@RoboLaser.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img_ZoomBotLaser" fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@RoboLaser.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img_SpinBotLaser" fitHeight="50.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@RoboLaser.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btn_startingPoint1_4" layoutX="50.0" layoutY="150.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onMouseClicked="#setStartingPoint1_4" prefHeight="50.0" prefWidth="50.0" styleClass="btn_robots" />
+                  <Button fx:id="btn_startingPoint1_7" layoutX="50.0" layoutY="300.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onMouseClicked="#setStartingPoint1_7" prefHeight="50.0" prefWidth="50.0" styleClass="btn_robots" />
+                  <Button fx:id="btn_startingPoint2_2" layoutX="100.0" layoutY="50.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onMouseClicked="#setStartingPoint2_2" prefHeight="50.0" prefWidth="50.0" styleClass="btn_robots" />
+                  <Button fx:id="btn_startingPoint2_5" layoutX="100.0" layoutY="200.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onMouseClicked="#setStartingPoint2_5" prefHeight="50.0" prefWidth="50.0" styleClass="btn_robots" />
+                  <Button fx:id="btn_startingPoint2_6" layoutX="100.0" layoutY="250.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onMouseClicked="#setStartingPoint2_6" prefHeight="50.0" prefWidth="50.0" styleClass="btn_robots" />
+                  <Button fx:id="btn_startingPoint2_9" layoutX="100.0" layoutY="400.0" maxHeight="50.0" maxWidth="50.0" minHeight="50.0" minWidth="50.0" mnemonicParsing="false" onMouseClicked="#setStartingPoint2_9" prefHeight="50.0" prefWidth="50.0" styleClass="btn_robots" />
+                  <ImageView fx:id="img_Twonky" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Robots/TwonkyGameView.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img_HulkX90" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Robots/HulkX90GameView.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img_HammerBot" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Robots/HammerBotGameView.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img_SmashBot" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Robots/SmashBotGameView.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img_ZoomBot" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Robots/ZoomBotGameView.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img_SpinBot" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Robots/SpinBotGameView.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img_TwonkyDamage" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Damage.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img_HulkX90Damage" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Damage.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img_HammerBotDamage" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Damage.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img_SmashBotDamage" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Damage.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img_ZoomBotDamage" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Damage.gif" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="img_SpinBotDamage" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Damage.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+               <StackPane.margin>
+                  <Insets left="120.0" />
+               </StackPane.margin>
+            </Pane>
+            <Pane fx:id="pane_setStartingPoint" maxHeight="300.0" maxWidth="400.0" minHeight="300.0" minWidth="400.0" prefHeight="300.0" prefWidth="400.0" visible="false" StackPane.alignment="TOP_LEFT">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="300.0" layoutX="80.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Backgrounds/NameBackground.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="150.0" layoutY="100.0" text="Set Your" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Neon Toolbox" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="115.0" layoutY="135.0" text="Starting Point" textFill="WHITE">
+                     <font>
+                        <Font name="Neon Toolbox" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+               <StackPane.margin>
+                  <Insets left="300.0" top="100.0" />
+               </StackPane.margin>
+            </Pane>
+            <GridPane fx:id="grid_Phase1" layoutX="10.0" layoutY="520.0" maxHeight="260.0" minHeight="160.0" prefHeight="260.0" visible="false" StackPane.alignment="TOP_LEFT">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="350.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="630.0" minWidth="630.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="100.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="160.0" minHeight="160.0" prefHeight="160.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Pane fx:id="pane_Phase211" maxHeight="200.0" maxWidth="1080.0" minWidth="200.0" prefHeight="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                     <children>
+                        <ImageView fx:id="img_register11" fitHeight="110.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Phases/Phase1/EnergyCubes.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="TOP_LEFT" layoutX="119.0" layoutY="77.0" text="Available: 10" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane minWidth="200.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                     <children>
+                        <ImageView fx:id="img_programmingCard11" fitHeight="110.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Phases/Phase2/RegisterBackground.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_programmingCard21" fitHeight="110.0" fitWidth="175.0" layoutX="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Phases/Phase2/RegisterBackground.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_programmingCard31" fitHeight="110.0" fitWidth="175.0" layoutX="140.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Phases/Phase2/RegisterBackground.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_programmingCard41" fitHeight="110.0" fitWidth="175.0" layoutX="210.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Phases/Phase2/RegisterBackground.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_programmingCard51" fitHeight="110.0" fitWidth="175.0" layoutX="280.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Phases/Phase2/RegisterBackground.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_programmingCard61" fitHeight="110.0" fitWidth="175.0" layoutX="350.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Phases/Phase2/RegisterBackground.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_upgradeCard1" alignment="BOTTOM_CENTER" contentDisplay="CENTER" minHeight="140.0" minWidth="65.0" mnemonicParsing="false" styleClass="btn_cards" text="Buy" textAlignment="CENTER" />
+                        <Button fx:id="btn_upgradeCard2" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="70.0" minHeight="140.0" minWidth="65.0" mnemonicParsing="false" styleClass="btn_cards" text="Buy" textAlignment="CENTER" />
+                        <Button fx:id="btn_upgradeCard3" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="140.0" minHeight="140.0" minWidth="65.0" mnemonicParsing="false" styleClass="btn_cards" text="Buy" textAlignment="CENTER" />
+                        <Button fx:id="btn_upgradeCard4" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="210.0" minHeight="140.0" minWidth="65.0" mnemonicParsing="false" styleClass="btn_cards" text="Buy" textAlignment="CENTER" />
+                        <Button fx:id="btn_upgradeCard5" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="280.0" minHeight="140.0" minWidth="65.0" mnemonicParsing="false" styleClass="btn_cards" text="Buy" textAlignment="CENTER" />
+                        <Button fx:id="btn_upgradeCard6" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="350.0" minHeight="140.0" minWidth="65.0" mnemonicParsing="false" styleClass="btn_cards" text="Buy" textAlignment="CENTER" />
+                     </children>
+                  </Pane>
+               </children>
+               <StackPane.margin>
+                  <Insets top="510.0" />
+               </StackPane.margin>
+            </GridPane>
+            <GridPane fx:id="grid_Phase2" layoutX="10.0" layoutY="520.0" maxHeight="260.0" minHeight="160.0" prefHeight="260.0" visible="false" StackPane.alignment="TOP_LEFT">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="350.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="630.0" minWidth="630.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="180.0" minHeight="180.0" prefHeight="180.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Pane fx:id="pane_Phase21" maxHeight="200.0" maxWidth="1080.0" minWidth="200.0" prefHeight="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                     <children>
+                        <ImageView fx:id="img_register1" fitHeight="110.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@CurrentRegister.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_register2" fitHeight="110.0" fitWidth="175.0" layoutX="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@LockedRegister.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_register3" fitHeight="110.0" fitWidth="175.0" layoutX="140.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@LockedRegister.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_register4" fitHeight="110.0" fitWidth="175.0" layoutX="210.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@LockedRegister.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_register5" fitHeight="110.0" fitWidth="175.0" layoutX="280.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@LockedRegister.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_ResetRegister" layoutX="118.0" layoutY="115.0" minHeight="35.0" minWidth="110.0" mnemonicParsing="false" onMouseClicked="#resetRegisters" text="reset Registers">
+                           <font>
+                              <Font name="Neon Toolbox" size="13.0" />
+                           </font></Button>
+                     </children>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Pane>
+                  <Pane minWidth="200.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                     <children>
+                        <ImageView fx:id="img_programmingCard1" fitHeight="110.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Phases/Phase2/RegisterBackground.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_programmingCard2" fitHeight="110.0" fitWidth="175.0" layoutX="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Phases/Phase2/RegisterBackground.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_programmingCard3" fitHeight="110.0" fitWidth="175.0" layoutX="140.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Phases/Phase2/RegisterBackground.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_programmingCard4" fitHeight="110.0" fitWidth="175.0" layoutX="210.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Phases/Phase2/RegisterBackground.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_programmingCard5" fitHeight="110.0" fitWidth="175.0" layoutX="280.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Phases/Phase2/RegisterBackground.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_programmingCard6" fitHeight="110.0" fitWidth="175.0" layoutX="350.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Phases/Phase2/RegisterBackground.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_programmingCard7" fitHeight="110.0" fitWidth="175.0" layoutX="420.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Phases/Phase2/RegisterBackground.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_programmingCard8" fitHeight="110.0" fitWidth="175.0" layoutX="490.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Phases/Phase2/RegisterBackground.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_programmingCard9" fitHeight="110.0" fitWidth="175.0" layoutX="560.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Phases/Phase2/RegisterBackground.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_programmingCard1" alignment="BOTTOM_CENTER" contentDisplay="CENTER" minHeight="140.0" minWidth="65.0" mnemonicParsing="false" onMouseClicked="#selectProgramingCard1" styleClass="btn_cards" text="Select" textAlignment="CENTER" />
+                        <Button fx:id="btn_programmingCard2" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="70.0" minHeight="140.0" minWidth="65.0" mnemonicParsing="false" onMouseClicked="#selectProgramingCard2" styleClass="btn_cards" text="Select" textAlignment="CENTER" />
+                        <Button fx:id="btn_programmingCard3" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="140.0" minHeight="140.0" minWidth="65.0" mnemonicParsing="false" onMouseClicked="#selectProgramingCard3" styleClass="btn_cards" text="Select" textAlignment="CENTER" />
+                        <Button fx:id="btn_programmingCard4" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="210.0" minHeight="140.0" minWidth="65.0" mnemonicParsing="false" onMouseClicked="#selectProgramingCard4" styleClass="btn_cards" text="Select" textAlignment="CENTER" />
+                        <Button fx:id="btn_programmingCard5" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="280.0" minHeight="140.0" minWidth="65.0" mnemonicParsing="false" onMouseClicked="#selectProgramingCard5" styleClass="btn_cards" text="Select" textAlignment="CENTER" />
+                        <Button fx:id="btn_programmingCard6" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="350.0" minHeight="140.0" minWidth="65.0" mnemonicParsing="false" onMouseClicked="#selectProgramingCard6" styleClass="btn_cards" text="Select" textAlignment="CENTER" />
+                        <Button fx:id="btn_programmingCard7" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="420.0" minHeight="140.0" minWidth="65.0" mnemonicParsing="false" onMouseClicked="#selectProgramingCard7" styleClass="btn_cards" text="Select" textAlignment="CENTER" />
+                        <Button fx:id="btn_programmingCard8" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="490.0" minHeight="140.0" minWidth="65.0" mnemonicParsing="false" onMouseClicked="#selectProgramingCard8" styleClass="btn_cards" text="Select" textAlignment="CENTER" />
+                        <Button fx:id="btn_programmingCard9" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="560.0" minHeight="140.0" minWidth="65.0" mnemonicParsing="false" onMouseClicked="#selectProgramingCard9" styleClass="btn_cards" text="Select" textAlignment="CENTER">
+                           <font>
+                              <Font name="Neon Toolbox" size="13.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Pane>
+               </children>
+               <StackPane.margin>
+                  <Insets top="510.0" />
+               </StackPane.margin>
+            </GridPane>
+            <GridPane fx:id="grid_Damage" layoutX="10.0" layoutY="520.0" maxHeight="260.0" minHeight="160.0" prefHeight="260.0" visible="false" StackPane.alignment="TOP_LEFT">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="320.0" minWidth="311.3333435058594" prefWidth="314.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="50.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="630.0" minWidth="630.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="160.0" minHeight="160.0" prefHeight="160.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Pane maxHeight="200.0" maxWidth="1080.0" minWidth="200.0" prefHeight="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                     <children>
+                        <ImageView fx:id="img_SelectDamage" fitHeight="140.0" fitWidth="350.0" layoutY="-20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/Phases/Phase3/SelectDamage.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lbl_RemainingDamages" alignment="TOP_LEFT" layoutX="105.0" layoutY="57.0" text="Remaining: 2" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Neon Toolbox" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane minWidth="200.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+                     <children>
+                        <ImageView fx:id="img_programmingCard111" fitHeight="110.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Trojan.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_programmingCard211" fitHeight="110.0" fitWidth="175.0" layoutX="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Worm.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_programmingCard311" fitHeight="110.0" fitWidth="175.0" layoutX="140.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Virus.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_SelectTrojan" alignment="BOTTOM_CENTER" contentDisplay="CENTER" minHeight="140.0" minWidth="65.0" mnemonicParsing="false" onMouseClicked="#selectTrojan" styleClass="btn_cards" text="Select" textAlignment="CENTER" />
+                        <Button fx:id="btn_SelectWorm" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="70.0" minHeight="140.0" minWidth="65.0" mnemonicParsing="false" onMouseClicked="#selectWorm" styleClass="btn_cards" text="Select" textAlignment="CENTER" />
+                        <Button fx:id="btn_SelectVirus" alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="140.0" minHeight="140.0" minWidth="65.0" mnemonicParsing="false" onMouseClicked="#selectVirus" styleClass="btn_cards" text="Select" textAlignment="CENTER" />
+                     </children>
+                  </Pane>
+               </children>
+               <StackPane.margin>
+                  <Insets top="510.0" />
+               </StackPane.margin>
+            </GridPane>
+            <GridPane fx:id="grid_ShuffleCards" alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="1080.0" maxWidth="1920.0" prefHeight="1080.0" prefWidth="1920.0" visible="false">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="1080.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="1920.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fx:id="img_ShuffleGIF" fitHeight="1080.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.hgrow="NEVER" GridPane.valignment="CENTER" GridPane.vgrow="NEVER">
+                     <image>
+                        <Image url="@Shuffle.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+            <Pane fx:id="pane_Phase3" maxHeight="680.0" maxWidth="420.0" minHeight="680.0" minWidth="400.0" prefHeight="680.0" prefWidth="420.0" visible="false" StackPane.alignment="TOP_LEFT">
+               <StackPane.margin>
+                  <Insets left="840.0" />
+               </StackPane.margin>
+               <children>
+                  <ImageView fitHeight="680.0" fitWidth="420.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Backgrounds/ActivationPhaseBackground.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="-68.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true" rotate="270.0">
+                     <image>
+                        <Image url="@Images/Phases/Phase3/ActivationPhase.png" />
+                     </image>
+                  </ImageView>
+                  <GridPane layoutX="65.0" layoutY="50.0" maxWidth="315.0" minWidth="315.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ImageView fx:id="img_TwonkyActivationPhase" fitHeight="70.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <image>
+                              <Image url="@Images/Robots/TwonkyAvatar.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_HulkX90ActivationPhase" fitHeight="70.0" fitWidth="150.0" layoutX="35.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <image>
+                              <Image url="@Images/Robots/HulkX90Avatar.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_HammerBotActivationPhase" fitHeight="70.0" fitWidth="150.0" layoutX="135.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <image>
+                              <Image url="@Images/Robots/HammerBotAvatar.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_TwonkyRegister1" fitHeight="50.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_TwonkyRegister2" fitHeight="50.0" fitWidth="90.0" layoutX="10.0" layoutY="98.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_TwonkyRegister3" fitHeight="50.0" fitWidth="90.0" layoutX="10.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_TwonkyRegister4" fitHeight="50.0" fitWidth="90.0" layoutX="10.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_TwonkyRegister5" fitHeight="50.0" fitWidth="90.0" layoutX="10.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_HulkX90Register1" fitHeight="50.0" fitWidth="90.0" layoutX="15.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_HulkX90Register2" fitHeight="50.0" fitWidth="90.0" layoutX="15.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_HulkX90Register3" fitHeight="50.0" fitWidth="90.0" layoutX="15.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_HulkX90Register4" fitHeight="50.0" fitWidth="90.0" layoutX="15.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_HulkX90Register5" fitHeight="50.0" fitWidth="90.0" layoutX="15.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_HammerBotRegister1" fitHeight="50.0" fitWidth="90.0" layoutX="115.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_HammerBotRegister2" fitHeight="50.0" fitWidth="90.0" layoutX="115.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_HammerBotRegister3" fitHeight="50.0" fitWidth="90.0" layoutX="115.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_HammerBotRegister4" fitHeight="50.0" fitWidth="90.0" layoutX="115.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_HammerBotRegister5" fitHeight="50.0" fitWidth="90.0" layoutX="115.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="65.0" layoutY="350.0" maxWidth="315.0" minWidth="315.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="70.0" minHeight="70.0" prefHeight="70.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="40.0" minHeight="40.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fx:id="img_SmashBotActivationPhase" fitHeight="70.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <image>
+                              <Image url="@Images/Robots/SmashBotAvatar.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_ZoomBotActivationPhase" fitHeight="70.0" fitWidth="150.0" layoutX="35.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <image>
+                              <Image url="@Images/Robots/ZoomBotAvatar.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_SpinBotActivationPhase" fitHeight="70.0" fitWidth="150.0" layoutX="135.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                           <image>
+                              <Image url="@Images/Robots/SpinBotAvatar.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_SmashBotRegister1" fitHeight="50.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_SmashBotRegister2" fitHeight="50.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_SmashBotRegister3" fitHeight="50.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_SmashBotRegister4" fitHeight="50.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_SmashBotRegister5" fitHeight="50.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_ZoomBotRegister1" fitHeight="50.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_ZoomBotRegister2" fitHeight="50.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_ZoomBotRegister3" fitHeight="50.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_ZoomBotRegister4" fitHeight="50.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_ZoomBotRegister5" fitHeight="50.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_SpinBotRegister1" fitHeight="50.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_SpinBotRegister2" fitHeight="50.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_SpinBotRegister3" fitHeight="50.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_SpinBotRegister4" fitHeight="50.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_SpinBotRegister5" fitHeight="50.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                           <image>
+                              <Image url="@TurnRightPhase3.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </GridPane>
+                  <Button fx:id="btn_ClosePhase3" layoutX="10.0" layoutY="10.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onMouseClicked="#closePhase3" styleClass="btn_close" />
+               </children>
+            </Pane>
+            <Pane fx:id="pane_Stats" maxHeight="680.0" maxWidth="420.0" minHeight="680.0" minWidth="400.0" prefHeight="680.0" prefWidth="420.0" StackPane.alignment="TOP_LEFT">
+               <children>
+                  <ImageView fitHeight="680.0" fitWidth="420.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Backgrounds/ActivationPhaseBackground.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btn_previousPlayer" layoutX="110.0" layoutY="55.0" minWidth="70.0" mnemonicParsing="false" onMouseClicked="#previousPlayer" styleClass="btn_previous" />
+                  <ImageView fx:id="img_YourStatistics" fitHeight="140.0" fitWidth="200.0" layoutX="-68.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true" rotate="270.0">
+                     <image>
+                        <Image url="@Images/Other/YourStatistics.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btn_CloseStats" layoutX="10.0" layoutY="10.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onMouseClicked="#closeStats" styleClass="btn_close" />
+                  <ImageView fx:id="img_ownPlayerAvatar2" fitHeight="100.0" fitWidth="230.0" layoutX="160.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Robots/HulkX90Avatar.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lbl_OwnName2" alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="119.0" minWidth="220.0" text="Label" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Neon Toolbox" size="26.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="img_OwnPlayerAvatar21" fitHeight="130.0" fitWidth="270.0" layoutX="145.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Other/EnergyCubes.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lbl_EnergyCubes" alignment="CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="266.0" minWidth="220.0" text="5" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Neon Toolbox" size="26.0" />
+                     </font>
+                  </Label>
+                  <GridPane layoutX="110.0" layoutY="350.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ImageView fx:id="img_ControlPoint2" fitHeight="100.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                           <image>
+                              <Image url="@OpenControlPoint2.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_ControlPoint3" fitHeight="100.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                           <image>
+                              <Image url="@OpenControlPoint3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_ControlPoint4" fitHeight="100.0" fitWidth="180.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <image>
+                              <Image url="@OpenControlPoint4.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_ControlPoint1" fitHeight="100.0" fitWidth="180.0" layoutX="110.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@OpenControlPoint1.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </GridPane>
+                  <Button fx:id="btn_nextPlayer" layoutX="260.0" layoutY="55.0" minWidth="70.0" mnemonicParsing="false" onMouseClicked="#nextPlayer" styleClass="btn_next" />
+               </children>
+               <StackPane.margin>
+                  <Insets left="840.0" />
+               </StackPane.margin>
+            </Pane>
+            <Pane fx:id="pane_CardsYouGotNow" layoutX="850.0" layoutY="10.0" maxHeight="680.0" maxWidth="420.0" minHeight="680.0" minWidth="400.0" prefHeight="680.0" prefWidth="420.0" visible="false" StackPane.alignment="TOP_LEFT">
+               <children>
+                  <ImageView fitHeight="680.0" fitWidth="420.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Backgrounds/ActivationPhaseBackground.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="120.0" layoutY="80.0" text="The Timer got you!" textFill="WHITE">
+                     <font>
+                        <Font name="Neon Toolbox" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="130.0" layoutY="110.0" text="Your new cards are:" textFill="WHITE">
+                     <font>
+                        <Font name="Neon Toolbox" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_CloseCardsYouGotNow" layoutX="10.0" layoutY="10.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onMouseClicked="#closeCardsYouGotNow" styleClass="btn_close" />
+                  <GridPane alignment="CENTER" layoutX="165.0" layoutY="160.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fx:id="img_yourCards1" fitHeight="100.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER">
+                           <image>
+                              <Image url="@MoveI.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_yourCards2" fitHeight="100.0" fitWidth="180.0" layoutX="30.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <image>
+                              <Image url="@MoveI.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_yourCards3" fitHeight="100.0" fitWidth="180.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                           <image>
+                              <Image url="@MoveI.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_yourCards4" fitHeight="100.0" fitWidth="180.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                           <image>
+                              <Image url="@MoveI.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_yourCards5" fitHeight="100.0" fitWidth="180.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                           <image>
+                              <Image url="@MoveI.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </GridPane>
+               </children>
+               <StackPane.margin>
+                  <Insets left="840.0" />
+               </StackPane.margin>
+            </Pane>
+            <Pane fx:id="pane_DrawDamage" layoutX="850.0" layoutY="10.0" maxHeight="680.0" maxWidth="420.0" minHeight="680.0" minWidth="400.0" prefHeight="680.0" prefWidth="420.0" visible="false" StackPane.alignment="TOP_LEFT">
+               <children>
+                  <ImageView fitHeight="680.0" fitWidth="420.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/Backgrounds/ActivationPhaseBackground.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="125.0" layoutY="80.0" text="You have been hit!" textFill="WHITE">
+                     <font>
+                        <Font name="Neon Toolbox" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="90.0" layoutY="110.0" text="You drew these damage cards:" textFill="WHITE">
+                     <font>
+                        <Font name="Neon Toolbox" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_CloseDrawDamage" layoutX="10.0" layoutY="10.0" minHeight="40.0" minWidth="40.0" mnemonicParsing="false" onMouseClicked="#closeDrawDamage" styleClass="btn_close" />
+                  <GridPane alignment="CENTER" layoutX="165.0" layoutY="160.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="100.0" minHeight="120.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="100.0" minHeight="120.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="100.0" minHeight="120.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="100.0" minHeight="120.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <ImageView fx:id="img_SpamCard" fitHeight="100.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT">
+                           <image>
+                              <Image url="@Spam.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_Virus" fitHeight="100.0" fitWidth="180.0" layoutX="30.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                           <image>
+                              <Image url="@Virus.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_Trojan" fitHeight="100.0" fitWidth="180.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                           <image>
+                              <Image url="@Trojan.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_Worm" fitHeight="100.0" fitWidth="180.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                           <image>
+                              <Image url="@Worm.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_SpamHidden" fitHeight="100.0" fitWidth="180.0" layoutX="20.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT">
+                           <image>
+                              <Image url="@NoCard.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_VirusHidden" fitHeight="100.0" fitWidth="180.0" layoutX="30.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                           <image>
+                              <Image url="@NoCard.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_TrojanHidden" fitHeight="100.0" fitWidth="180.0" layoutX="30.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+                           <image>
+                              <Image url="@NoCard.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="img_WormHidden" fitHeight="100.0" fitWidth="180.0" layoutX="30.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                           <image>
+                              <Image url="@NoCard.png" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lbl_SpamCount" alignment="CENTER" text="3" textFill="WHITE">
+                           <font>
+                              <Font name="Neon Toolbox" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_VirusCount" alignment="CENTER" layoutX="10.0" layoutY="39.0" text="3" textFill="WHITE" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Neon Toolbox" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_TrojanCount" alignment="CENTER" layoutX="10.0" layoutY="39.0" text="3" textFill="WHITE" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Neon Toolbox" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbl_WormCount" alignment="CENTER" layoutX="20.0" layoutY="49.0" text="3" textFill="WHITE" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Neon Toolbox" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+               <StackPane.margin>
+                  <Insets left="840.0" />
+               </StackPane.margin>
+            </Pane>
+            <GridPane fx:id="grid_Chat" visible="false" StackPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <ImageView fitHeight="520.0" fitWidth="1180.0" pickOnBounds="true" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@Images/Backgrounds/ChatBackground.png" />
+                     </image>
+                  </ImageView>
+                  <GridPane alignment="CENTER" maxHeight="600.0" maxWidth="1400.0" minHeight="400.0" minWidth="1080.0" prefHeight="400.0" prefWidth="1080.0" GridPane.halignment="CENTER">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="460.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <GridPane maxHeight="400.0" maxWidth="1080.0" minHeight="400.0" minWidth="1080.0" prefHeight="400.0" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="600.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints />
+                           </rowConstraints>
+                           <children>
+                              <TextArea fx:id="txt_ChatHistory" maxHeight="300.0" maxWidth="800.0" prefHeight="300.0" prefWidth="800.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                              <TextArea fx:id="txt_ChatMessage" maxHeight="80.0" maxWidth="800.0" prefHeight="100.0" prefWidth="800.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+                              <Button fx:id="btn_SendChat" maxHeight="50.0" maxWidth="200.0" mnemonicParsing="false" onMouseClicked="#sendChat" prefHeight="50.0" prefWidth="240.0" text="Send" textFill="RED" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM">
+                                 <font>
+                                    <Font name="Neon Toolbox" size="20.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" />
+                                 </GridPane.margin>
+                              </Button>
+                              <GridPane GridPane.columnIndex="1">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.0" minWidth="10.0" prefWidth="202.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <CheckBox fx:id="cb_Player2" layoutX="348.0" layoutY="25.0" mnemonicParsing="false" text="Player 2" textFill="WHITE" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Neon Toolbox" size="24.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="cb_Player3" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" text="Player 3" textFill="WHITE" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Neon Toolbox" size="24.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="cb_Player4" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" text="Player 4" textFill="WHITE" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Neon Toolbox" size="24.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="cb_Player5" layoutX="10.0" layoutY="25.0" mnemonicParsing="false" text="Player 5" textFill="WHITE" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="Neon Toolbox" size="24.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <CheckBox fx:id="cb_Player1" layoutX="10.0" layoutY="90.0" mnemonicParsing="false" text="Player 1" textFill="WHITE">
+                                       <font>
+                                          <Font name="Neon Toolbox" size="24.0" />
+                                       </font>
+                                    </CheckBox>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets left="40.0" />
+                                 </GridPane.margin>
+                              </GridPane>
+                           </children>
+                        </GridPane>
+                        <Button fx:id="btn_GoBack" maxHeight="50.0" maxWidth="200.0" mnemonicParsing="false" onMouseClicked="#closeChat" prefHeight="50.0" prefWidth="200.0" styleClass="btn_close" text="Go Back" textFill="RED" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                           <font>
+                              <Font name="Neon Toolbox" size="20.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets top="10.0" />
+                           </GridPane.margin>
+                        </Button>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+            <GridPane fx:id="grid_GameEnd">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ImageView fx:id="img_gameWon" fitHeight="1280.0" fitWidth="2080.0" pickOnBounds="true" preserveRatio="true" translateX="-50.0" translateY="-50.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <image>
+                        <Image url="@GameWon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </GridPane>
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
